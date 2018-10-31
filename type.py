@@ -60,9 +60,9 @@ class Typing:
             if self.level == 'yeet':
                 self.yeet = True
                 self.divisor = 4
-            elif self.level == 2:
+            elif self.level == '2':
                 self.divisor = 3
-            elif self.level == 3:
+            elif self.level == '3':
                 self.divisor = 4
             else:
                 self.level = 1
