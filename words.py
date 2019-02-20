@@ -3,16 +3,34 @@ starting_message = '''
 Hello, this is a typing game.
 It has over 58,000 words to type.
 
-Typing something in time will give you 1 point.
-Not typing it in time will give you 0 points.
+Typing something in time will give you one point.
+Not typing it in time will give you zero points.
 Misspelling something will take one of your points away.
 
 Ctrl-C to exit
 
-Enter in the level of difficulty you would like (1, 2, or 3)
-Default is 1.
+'''
+
+speed_message = '''
+
+Enter in the speed you would like (1, 2, or 3)
+Leave blank for 1
 
 '''
+name_message = '''
+
+Enter your name (up to 8 characters)
+
+'''
+round_message = '''
+
+Enter the number of rounds you would like to play (10, 25, 50)
+Leave blank to play infinitely until you hit Ctrl-C
+
+Note: if you do not select a number your score will not be saved
+
+'''
+
 
 line = '------------------------------------------------------------' 
 

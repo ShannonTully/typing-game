@@ -1,0 +1,4 @@
+make leaderboards (maybe a personal leaderboard and a "global" leaderboard)
+make name input for leaderboards
+make round amount selection (10 25 50 infinite)
+make separate difficulty for word commonness
