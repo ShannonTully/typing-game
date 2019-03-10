@@ -30,6 +30,13 @@ Leave blank to play infinitely until you hit Ctrl-C
 Note: if you do not select a number your score will not be saved
 
 '''
+game_mode_message = '''
+
+Enter whic game mode you would like to play(1 or 2)
+Leave blank for 1
+
+'''
+
 
 
 line = '------------------------------------------------------------' 

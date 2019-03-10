@@ -1,8 +1,38 @@
 import time
 import random
+from getch import getch as gc
+from random_word import RandomWords as rand
+from pygame import mixer 
 from words import words
-from words import starting_message, speed_message, name_message, round_message
+from words import starting_message, game_mode_message, speed_message, name_message, round_message
 from words import line
+
+
+class KeyPlay:
+
+    def __init__(self):
+
+        self.timer = 0
+        self.song = mixer
+
+        self.load_song()
+
+    def load_song(self):
+        self.song.init()
+        self.song.music.load('03_Klad_Get.mp3')
+        self.play_music()
+
+    def play_music(self):
+        while type(gc()) is str:
+            # import pdb; pdb.set_trace()
+            if self.timer == 0:
+                self.song.music.play(start=self.timer)
+            else:
+                self.song.music.unpause()
+            time.sleep(.12)
+            self.song.music.pause()
+            self.timer += 1
+        self.play_music()
 
 
 class Typing_game:
@@ -29,6 +59,7 @@ class Typing_game:
 
     def get_word(self):
         self.word = random.choice(self.words)
+        # self.word = rand.get_random_word(self, hasDictionaryDef="true")
 
     def get_input(self):
         if self.yeet:
@@ -47,6 +78,9 @@ class Typing_game:
         elif ' ' in self.name:
             print('\nSorry, no spaces please.')
             self.get_name()
+
+    def get_game_mode(self):
+        self.game_type = input(game_mode_message)
 
     def get_rounds(self):
         self.total_rounds = input(round_message)
@@ -181,6 +215,8 @@ class Typing_game:
         print(starting_message)
         print(line)
         self.get_name()
+        print(line)
+        self.get_game_type()
         print(line)
         self.get_rounds()
         print(line)
